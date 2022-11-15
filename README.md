@@ -4,19 +4,21 @@ Here we use the thirdweb's node sdk to create a script for getting all owners an
 
 ## Setup
 
-To run the project, first clone this repository, and then run one of the following commands to install the dependencies:
+To run the project, first clone this repository:
 
 ```bash
-npm install
-# or
-yarn install
+npx thirdweb@latest create --template airdrop-nfts-to-holders
 ```
 
-You can run the script with the following command:
+Modify the [airdrop.mjs](./scripts/airdrop.mjs) file with your **smart contract address** and **network**.
+
+When you're ready, run the script with the following command:
 
 ```bash
 node scripts/airdrop.mjs
 ```
+
+This will generate a new file called `nfts.csv` containing your snapshot, which you can upload to the dashboard!
 
 ## How It Works
 
