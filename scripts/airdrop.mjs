@@ -3,7 +3,10 @@ import fs from "fs";
 import path from "path";
 
 (async () => {
+  // TODO: Replace this with your network
   const sdk = new ThirdwebSDK("goerli");
+
+  // TODO: Replace this with your smart contract address
   const contract = await sdk.getContract(
     "0x08d4CC2968cB82153Bb70229fDb40c78fDF825e8"
   );
