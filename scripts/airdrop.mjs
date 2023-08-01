@@ -1,10 +1,15 @@
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { config } from "dotenv";
 import fs from "fs";
 import path from "path";
 
+config();
+
 (async () => {
   // TODO: Replace this with your network
-  const sdk = new ThirdwebSDK("goerli");
+  const sdk = new ThirdwebSDK("goerli", {
+    secretKey: process.env.TW_SECRET_KEY
+  });
 
   // TODO: Replace this with your smart contract address
   const contract = await sdk.getContract(
